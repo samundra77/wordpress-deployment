@@ -1,24 +1,21 @@
 name: Deploy WordPress
-
 on:
   push:
     branches:
       - wordpress-deployment
-
 jobs:
   deploy:
-    runs-on:self-hosted
-
+    runs-on: self-hosted
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
-
+ 
 
     - name: Deploy to Kubernetes
       run: |
         kubectl apply -f deployment.yaml
         kubectl apply -f mysql.yaml
-        
+ 
 
     - name: Verify Deployment
       run: |
