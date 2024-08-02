@@ -9,7 +9,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Checkout repository
-        run: echo "hello world"
+        uses: actions/checkout@v3
       - name: Deploy to Kubernetes
         run: |
           kubectl apply -f deployment.yaml
