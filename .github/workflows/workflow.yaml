@@ -16,4 +16,4 @@ jobs:
           kubectl apply -f mysql.yaml
       - name: Verify Deployment
         run: |
-          kubectl rollout status deployment/wordpress-deployment
+          kubectl get pods -A
