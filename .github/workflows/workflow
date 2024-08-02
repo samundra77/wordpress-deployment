@@ -2,7 +2,7 @@ name: Deploy WordPress
 on:
   push:
     branches:
-      - wordpress-deployment
+      - main
 jobs:
   deploy:
     runs-on: self-hosted
